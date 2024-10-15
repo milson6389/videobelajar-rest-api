@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "Transfer Bank",
+    "trxType": "trf",
     "sub": [
       {
         "title": "Bank BCA",
@@ -55,12 +56,13 @@
       {
         "title": "Transfer via Mobile Banking",
         "desc": [
-          "1. Masukkan kartu ATM dan PIN Anda",
+          "1. Buka Aplikasi Mobile Banking",
           "2. Di menu utama pilih Transaksi Lainnya. Pilih Transfer. Pilih Ke Virtual Account",
           "3. Masukkan nomor Virtual Account",
-          "4. Pastikan data Virtual Account Anda benar, kemudian masukkan angka yang perlu anda bayarkan, kemudian pilih Benar",
-          "5. Cek dan perhatikan konfirmasi pembayaran dari layar ATM, jika sudah benar pilih Ya, atau pilih Tidak jika data di layar masih salah",
-          "6. Transaksi Anda sudah selesai. Pilih Tidak untuk tidak melanjutkan transaksi lain"
+          "4. Pastikan data Virtual Account Anda benar, kemudian masukkan angka yang perlu anda bayarkan, kemudian Klik tombol Send",
+          "5. Klik OK untuk melanjutkan pembayaran",
+          "6. Masukkan PIN Anda untuk mengotorisasi transaksi",
+          "7. Transaksi Anda telah selesai"
         ]
       }
     ]
@@ -68,6 +70,7 @@
   {
     "id": 2,
     "title": "E-Wallet",
+    "trxType": "ewallet",
     "sub": [
       {
         "title": "Dana",
