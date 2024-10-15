@@ -19,6 +19,7 @@ const addTrx = async (trxObj) => {
     kelasTitle: trxObj.title,
     trxNo: `INV/${invCode}`,
     trxDt: new Date().toLocaleString(),
+    trxType: trxObj.trxType,
     paidDt: "",
     wopCode: trxObj.wopCode,
     price: trxObj.price,
