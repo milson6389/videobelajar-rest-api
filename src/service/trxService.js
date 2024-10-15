@@ -13,7 +13,7 @@ const generateTrxInvNo = () => {
 const addTrx = async (trxObj) => {
   const invCode = generateTrxInvNo();
   const newTrx = {
-    id: +new Date(),
+    id: trxObj.id,
     userId: trxObj.email,
     kelasId: trxObj.kelasId,
     kelasTitle: trxObj.title,
