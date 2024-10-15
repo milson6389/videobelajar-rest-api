@@ -3,7 +3,8 @@ import courseService from "../service/courseService.js";
 const addCourseToPaidCourse = async (req, res, next) => {
   try {
     const courseId = req.body.courseId;
-    const result = await courseService.addKelasToPaidCourse(courseId);
+    const user = req.body.userId;
+    const result = await courseService.addKelasToPaidCourse(courseId, user);
     res.status(201).json({
       data: result,
     });
@@ -23,7 +24,8 @@ const getAllCourseList = async (req, res, next) => {
 };
 const getAllPaidCourseList = async (req, res, next) => {
   try {
-    const result = await courseService.getAllPaidKelas();
+    const user = req.params?.userId || "";
+    const result = await courseService.getAllPaidKelas(user);
     res.status(200).json({
       data: result,
     });

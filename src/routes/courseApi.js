@@ -10,4 +10,8 @@ courseRouter
   .get(courseController.getAllPaidCourseList)
   .post(courseController.addCourseToPaidCourse);
 
+courseRouter
+  .route("/api/v1/course/:userId")
+  .get(courseController.getAllPaidCourseList);
+
 export { courseRouter };
