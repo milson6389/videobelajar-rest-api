@@ -9,6 +9,6 @@ trxRouter
   .put(trxController.updateTrx)
   .delete(trxController.deleteTrx);
 trxRouter.route("/api/v1/trx/:userId").get(trxController.getAllTrx);
-trxRouter.route("/api/v1/trx/:id").get(trxController.getTrxById);
+trxRouter.route("/api/v1/trxinfo/:id").get(trxController.getTrxById);
 
 export { trxRouter };
