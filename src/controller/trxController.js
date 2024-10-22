@@ -12,6 +12,18 @@ const getAllTrx = async (req, res, next) => {
   }
 };
 
+const getTrxById = async (req, res, next) => {
+  try {
+    const trxId = req.params.id;
+    const result = await trxService.getTrxById(trxId);
+    res.status(200).json({
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 const addTrx = async (req, res, next) => {
   try {
     const trxData = req.body;
@@ -50,6 +62,7 @@ const deleteTrx = async (req, res, next) => {
 
 export default {
   getAllTrx,
+  getTrxById,
   addTrx,
   updateTrx,
   deleteTrx,

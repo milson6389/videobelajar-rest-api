@@ -36,6 +36,11 @@ const getAllTrx = async (userId) => {
   return userTrx;
 };
 
+const getTrxById = async (trxId) => {
+  const currTrx = trxes.filter((trx) => trx.id == trxId);
+  return currTrx;
+};
+
 const updateTrx = async (trx) => {
   const selectedTrx = trxes.findIndex((t) => t.id == trx.id);
   if (selectedTrx < 0) {
@@ -65,6 +70,7 @@ const deleteTrx = async (trx) => {
 
 export default {
   getAllTrx,
+  getTrxById,
   addTrx,
   updateTrx,
   deleteTrx,
